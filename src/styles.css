@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+header {
+    padding-top: 8px;
+    text-align: center;
+    background: #14bd9bd8;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    height: 70px;
+}
