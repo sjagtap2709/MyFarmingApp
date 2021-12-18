@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'SmartFarmingApp';
   constructor(private router: Router) {
-
+   
   }
-  ngOnInit():void{
+  ngOnInit(): void {
     this.router.navigate(['/Login']);
   }
 }

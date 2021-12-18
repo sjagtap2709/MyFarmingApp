@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -10,20 +11,23 @@ export class LoginComponent implements OnInit {
 
   userid: string | undefined;
   userpass: string | undefined;
+  
   constructor(private router: Router) {
 
   }
   login(): void {
-    if(this.userid=="1234"&&this.userpass=="1111"){
+    if (this.userid == "1234" && this.userpass == "1111") {
       this.router.navigate(['/UserPage']);
     }
-    else{
-      this.userpass=undefined;
-      this.userid=undefined;
+    else {
+      this.userpass = undefined;
+      this.userid = undefined;
       alert("Invalid Credential")
     }
   }
   ngOnInit(): void {
+
   }
+
 
 }
