@@ -1,0 +1,14 @@
+.navbar {
+    background-color: rgb(132, 184, 83);
+}
+
+.btn {
+    box-shadow: 0px 7px 6px 5px rgba(187, 226, 172, 0.932);
+    margin: 10px;
+}
+
+.card {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
