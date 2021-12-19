@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { FormsModule } from '@angular/forms';
+import { AddCropComponent } from './add-crop/add-crop.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserPageComponent
+    UserPageComponent,
+    AddCropComponent
   ],
   imports: [
     FormsModule,

@@ -14,3 +14,7 @@ footer {
     color: white;
     margin-top: 20em;
 }
+
+header:hover {
+    background-color: cyan;
+}
