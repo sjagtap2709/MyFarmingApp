@@ -7,12 +7,14 @@ import { LoginComponent } from './login/login.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { FormsModule } from '@angular/forms';
 import { AddCropComponent } from './add-crop/add-crop.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserPageComponent,
-    AddCropComponent
+    AddCropComponent,
+    CreateAccountComponent
   ],
   imports: [
     FormsModule,
