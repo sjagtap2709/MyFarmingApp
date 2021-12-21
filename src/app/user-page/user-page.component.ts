@@ -1,4 +1,6 @@
+import { CompileIdentifierMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-page',
@@ -8,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class UserPageComponent implements OnInit {
 
   
-  constructor() { 
+  constructor(private router:Router) { 
   }
-
+  gotocrops():void{
+    this.router.navigate(['/Crops']);
+  }
   ngOnInit(): void {
   }
 
