@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AddCropComponent } from './add-crop/add-crop.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { AddoperationComponent } from './addoperation/addoperation.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { AddoperationComponent } from './addoperation/addoperation.component';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClient
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
