@@ -8,11 +8,7 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { FormsModule } from '@angular/forms';
 import { AddCropComponent } from './add-crop/add-crop.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-<<<<<<< HEAD
-
-=======
 import { AddoperationComponent } from './addoperation/addoperation.component';
->>>>>>> 505e676de51bbd90c07d64d108f07b52ab17e0b0
 @NgModule({
   declarations: [
     AppComponent,

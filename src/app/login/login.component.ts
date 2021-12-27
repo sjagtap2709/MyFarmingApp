@@ -10,11 +10,11 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class LoginComponent implements OnInit {
 
-  userid: string | undefined;
-  userpass: string | undefined;
-  url:string|undefined;
+ public userid: string | undefined;
+ public userpass: string | undefined;
+  url: string | undefined;
   constructor(private router: Router) {
-this.url=environment.apiurl;
+    this.url = environment.apiurl;
   }
   login(): void {
     if (this.userid == "1234" && this.userpass == "1111") {
@@ -23,8 +23,8 @@ this.url=environment.apiurl;
     else {
       this.userpass = undefined;
       this.userid = undefined;
-      alert("Invalid Credential"+this.url);
-      
+      alert("Invalid Credential" + this.url);
+
     }
   }
   ngOnInit(): void {
