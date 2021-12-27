@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppComponent } from '../app.component';
+import { environment } from 'src/environments/environment.prod';
+
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,9 @@ export class LoginComponent implements OnInit {
 
   userid: string | undefined;
   userpass: string | undefined;
-  
+  url:string|undefined;
   constructor(private router: Router) {
-
+this.url=environment.apiurl;
   }
   login(): void {
     if (this.userid == "1234" && this.userpass == "1111") {
@@ -22,7 +23,8 @@ export class LoginComponent implements OnInit {
     else {
       this.userpass = undefined;
       this.userid = undefined;
-      alert("Invalid Credential")
+      alert("Invalid Credential"+this.url);
+      
     }
   }
   ngOnInit(): void {

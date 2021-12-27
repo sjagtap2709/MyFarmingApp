@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
 
+  public username:string|undefined
   constructor() { }
 
   ngOnInit(): void {
