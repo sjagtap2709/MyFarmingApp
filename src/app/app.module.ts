@@ -8,13 +8,15 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { FormsModule } from '@angular/forms';
 import { AddCropComponent } from './add-crop/add-crop.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { AddoperationComponent } from './addoperation/addoperation.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserPageComponent,
     AddCropComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    AddoperationComponent
   ],
   imports: [
     FormsModule,

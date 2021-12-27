@@ -7,26 +7,33 @@ import { Crop } from '../Services/crop';
   styleUrls: ['./add-crop.component.css']
 })
 export class AddCropComponent implements OnInit {
-
-  public crops:Crop[];
+  public cropid: number | undefined
+  public cropdisplay:boolean;
+  public addcropmenu:boolean;
+  public crops: Crop[];
   constructor() {
-    this.crops=[
+    this.cropdisplay=true;
+    this.addcropmenu=false;
+    this.crops = [
       {
-        CropId:12,
-        CropName:"Sourabh",
-        CropImageUrl:"../../assets/maka.jpg ",
-        CropDescription:"dfasdfag"
-    },
+        CropId: 12,
+        CropName: "Sourabh",
+        CropImageUrl: "../../assets/maka.jpg ",
+        CropDescription: "dfasdfag"
+      },
       {
-        CropId:1,
-        CropName:"suhas",
-        CropImageUrl:"../../assets/wheat.jpg ",
-        CropDescription:"dfasdfag"
-    }
-  ]
-   }
-  Addcrop(num:number|undefined):void{
-    alert("you  alert"+num);
+        CropId: 1,
+        CropName: "suhas",
+        CropImageUrl: "../../assets/wheat.jpg ",
+        CropDescription: "dfasdfag"
+      }
+    ]
+  }
+  Addcrop(num: number | undefined): void {
+   this.cropid=num;
+   this.cropdisplay=false;
+   this.addcropmenu=true;
+
   }
   ngOnInit(): void {
   }
