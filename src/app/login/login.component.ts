@@ -17,12 +17,14 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private services: UserService) {
   }
 
-  login(): void {
+   login(): void {
     if (this.userpass == undefined && this.userid == undefined) {
       alert("Enter Credentials");
     }
     else {
       this.userstatus = this.services.CheckLogin(this.userid, this.userpass);
+      
+      alert(this.userstatus)
       if (this.userstatus == "NoUser") {
         {
           alert("Mail id is not registerd");
