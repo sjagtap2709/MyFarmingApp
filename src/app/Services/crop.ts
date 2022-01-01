@@ -1,6 +1,7 @@
 export class Crop {
-    public CropId:number | undefined;
-    public CropName:string | undefined;
-    public CropDescription:string | undefined;
-    public CropImageUrl:string | undefined;
+    public CropId!:number ;
+    public CropName!:string ;
+    public CropDecription:string | undefined;
+    public CropImgUrl:string | undefined;
+    public CropRate:number | undefined;
 }

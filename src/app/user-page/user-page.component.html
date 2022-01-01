@@ -1,28 +1,28 @@
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Smart Farming App</a>
+        <a class="navbar-brand" routerLink="/UserPage">{{profile.UserName}}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" routerLink="/UserPage">Home</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" routerLink="/Profile" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Profile
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                        <li><a class="dropdown-item" routerLink="/EditProfile">Edit Profile</a></li>
                         <li><a class="dropdown-item" href="#">Change Password</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Crops</a>
+                    <a class="nav-link active" aria-current="page" routerLink="/Crops">Crops</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" routerLink="/Login">LogOut</a>
@@ -35,20 +35,21 @@
 </nav>
 <div class="main">
     <button type="button" class="btn btn-outline-success" (click)="gotocrops()">+Add Crops</button>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Maka</h5>
-
-            <img style="height: 180px; width: 130px; background-color: aquamarine; float: right; margin-right: 8%;" src="" alt="image is not available">
-            <p class="card-text">Price;1000 rupess </p>
-            <p class="card-text">Date:28 sept</p>
-            <p class="card-text">Area:10acre</p>
-            <a href="#" class="btn btn-primary">Record</a>
+    <div *ngIf="iscrop">
+        <div class="card" *ngFor="let item of MyPlantings">
+            <div class="card-body">
+                <h5 class="card-title">{{item.CropName}}</h5>
+                <img style="height: 180px; width: 130px; background-color: aquamarine; float: right; margin-right: 8%;" src="{{item.CropImgUrl}}" alt="image is not available">
+                <p class="card-text">Price:1000 rupess </p>
+                <p class="card-text">Date:{{item.PlantingDate}}</p>
+                <p class="card-text">Area:{{item.Area}} Acre</p>
+                <a href="#" class="btn btn-primary" (click)="Record(item.PlantingId)">Record</a>
+            </div>
         </div>
     </div>
-    <div class="card" style="text-align: center; box-shadow: 0px 5px 30px 5px #0c521985;">
+    <div class="card nc" style="text-align: center; box-shadow: 0px 5px 30px 5px #0c521985;" *ngIf="isnotcrop">
         <div class="card-body">
-            <h5 class="card-title">You Do not add any crops</h5>
+            <h5 class="card-title">You Dont have any crops</h5>
         </div>
     </div>
 </div>

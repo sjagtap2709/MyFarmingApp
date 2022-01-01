@@ -16,5 +16,9 @@ footer {
 }
 
 header:hover {
-    background-color: cyan;
+    background-color: rgb(13, 151, 8);
+}
+
+.navbar {
+    background-color: rgb(132, 184, 83);
 }
